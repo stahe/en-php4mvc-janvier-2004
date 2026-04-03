@@ -475,6 +475,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#44-the-data-access-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. The data access class
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#45-the-tax-calculation-class" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -575,10 +586,32 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#4122-the-getinit-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.2. The get:init action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#4123-the-postcalculatetax-action" class="md-nav__link">
     <span class="md-ellipsis">
       
         4.12.3. The post:calculateTax action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4124-the-posteffacerformulaire-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12.4. The post:effacerformulaire action
       
     </span>
   </a>
@@ -657,6 +690,39 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#4144-the-basic-view-v-formphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14.4. The basic view v-form.php
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4145-the-basic-view-v-erreursphp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14.5. The basic view v-erreurs.php
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4146-the-style-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14.6. The Style Sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -679,6 +745,17 @@
     <span class="md-ellipsis">
       
         4.15.1. Role of a view generator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4152-the-view-generator-associated-with-the-e-form-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.15.2. The view generator associated with the [e-form] state
       
     </span>
   </a>
@@ -751,6 +828,17 @@
     <span class="md-ellipsis">
       
         4.16.3. Basic views
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4164-the-style-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.16.4. The style sheet
       
     </span>
   </a>
@@ -869,13 +957,10 @@
   <li><b>impots-data.php </b>is the class responsible for providing the controller with the data it needs
   </li>
   <li><b>impots-calcul.php </b>is the business logic class that calculates the tax
-<a id="refheading29978107341754"></a>
-
-## 4.4. <span style="color: #4f81bd">The data access class</span>
-
   </li>
 </ul>
-
+<p><a id="refheading29978107341754"></a></p>
+<h2 id="44-the-data-access-class">4.4. <span style="color: #4f81bd">The data access class</span></h2>
 <p>The data access class is designed to hide the data source from the web application. Its interface includes a <strong>getData</strong> method that  returns the three data arrays needed to calculate the tax. In our example, the data is retrieved from a MySQL database. To make the class independent of the actual DBMS type, we will use the <strong>pear::DB</strong> library described in the appendix. The class code is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -1459,13 +1544,10 @@
   <li>An action script may want to store information in the session. It does so by placing this information in the <b>$dSession</b> dictionary, which is automatically saved to the session by the controller at the end of the request-response cycle.
   </li>
   <li>An action script may have information to pass to views. This aspect is independent of the controller. It is the interface between actions and views, an interface specific to each application. In the example discussed here, actions will provide information to view generators via a dictionary called <b>$dResponse</b>.
-<a id="refheading29998107341754"></a>
-
-### 4.12.2. <span style="color: #4f81bd">**The get:init action**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading29998107341754"></a></p>
+<h3 id="4122-the-getinit-action">4.12.2. <span style="color: #4f81bd"><strong>The get:init action</strong></span></h3>
 <p>This is the action that generates the empty form. The configuration file shows that it will be handled by the <strong>a-init.php</strong> script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">  $dConfig[&#39;actions&#39;][&#39;get:init&#39;]=array(&#39;url&#39;=&gt;&#39;a-init.php&#39;);</span>
 </code></pre></div>
@@ -1574,13 +1656,10 @@
 </code></pre></div>
 <ul>
   <li>In all other cases, the application is set to the <b>[e-form] </b>state with the <b>tax calculation</b> variant specified in <b>$dSession[&#x27;state&#x27;][&#x27;secondary&#x27;]</b>. The configuration file shows that the <b>e-formulaire.php </b>script will generate the response view. It will use the value of <b>$dSession[&#x27;state&#x27;][&#x27;secondary&#x27;] </b>to generate a pre-filled form with the values entered by the user and the tax amount.
-<a id="refheading30002107341754"></a>
-
-### 4.12.4. <span style="color: #4f81bd">**The** post**:effacerformulaire action**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading30002107341754"></a></p>
+<h3 id="4124-the-posteffacerformulaire-action">4.12.4. <span style="color: #4f81bd"><strong>The</strong> post<strong>:effacerformulaire action</strong></span></h3>
 <p>It is associated by configuration with the <strong>a-init.php</strong> script already described.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">  $dConfig[&#39;actions&#39;][&#39;post:effacerformulaire&#39;]=array(&#39;url&#39;=&gt;&#39;a-init.php&#39;);</span>
 </code></pre></div>
@@ -1784,13 +1863,10 @@
   <li><b>title</b>: title to display
   </li>
   <li><b>result</b>: amount of tax due
-<a id="refheading30016107341754"></a>
-
-### 4.14.4. <span style="color: #4f81bd">**The basic view v-form.php**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading30016107341754"></a></p>
+<h3 id="4144-the-basic-view-v-formphp">4.14.4. <span style="color: #4f81bd"><strong>The basic view v-form.php</strong></span></h3>
 <p>The [vue2] section corresponds to either the <strong>[v-form]</strong> view or the <strong>[v-errors]</strong> view. The <strong>[v-form]</strong> view is generated by the <strong>v-formulaire.php</strong> script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;main.php?action=calculerimpot&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
@@ -1829,13 +1905,10 @@
   <li><b>children</b>: number of children to be placed in the txtenfants field
   </li>
   <li><b>salary</b>: annual salary to be placed in the txtsalary field
-<a id="refheading30018107341754"></a>
-
-### 4.14.5. <span style="color: #4f81bd">**The basic view v-erreurs.php**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading30018107341754"></a></p>
+<h3 id="4145-the-basic-view-v-erreursphp">4.14.5. <span style="color: #4f81bd"><strong>The basic view v-erreurs.php</strong></span></h3>
 <p>The <strong>[v-errors]</strong> view is generated by the <strong>v-errors.php</strong> script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>The following errors occurred:
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1858,13 +1931,10 @@
   <li><b>link</b>: text of a link
   </li>
   <li><b>href</b>: target URL of the link above
-<a id="refheading30020107341754"></a>
-
-### 4.14.6. <span style="color: #4f81bd">**The Style Sheet**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading30020107341754"></a></p>
+<h3 id="4146-the-style-sheet">4.14.6. <span style="color: #4f81bd"><strong>The Style Sheet</strong></span></h3>
 <p>All views are styled by a stylesheet. To change the visual appearance of the application, you modify its stylesheet. The following <strong>style1.css</strong> stylesheet: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nt">div</span><span class="p">.</span><span class="nc">menu</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFD700</span><span class="p">;</span>
@@ -2012,15 +2082,12 @@
       <li>save the session
       </li>
       <li>send the response
-<a id="refheading30026107341754"></a>
-
-### 4.15.2. <span style="color: #4f81bd">**The view generator associated with the [e-form] state**</span>
-
       </li>
     </ul>
   </li>
 </ul>
-
+<p><a id="refheading30026107341754"></a></p>
+<h3 id="4152-the-view-generator-associated-with-the-e-form-state">4.15.2. <span style="color: #4f81bd"><strong>The view generator associated with the [e-form] state</strong></span></h3>
 <p>The script responsible for generating the view associated with the <strong>[e-form]</strong> state is called <strong>e-form.php</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="nx">…</span>
@@ -2311,13 +2378,10 @@
   <li><b>errors</b>: array of error messages
   </li>
   <li><b>info</b>: information message
-<a id="refheading30040107341754"></a>
-
-### 4.16.4. <span style="color: #4f81bd">**The style sheet**</span>
-
   </li>
 </ul>
-
+<p><a id="refheading30040107341754"></a></p>
+<h3 id="4164-the-style-sheet">4.16.4. <span style="color: #4f81bd"><strong>The style sheet</strong></span></h3>
 <p>It hasn&#x27;t changed. It&#x27;s still <strong>style1.css</strong>.</p>
 <p><a id="refheading30042107341754"></a></p>
 <h3 id="4165-the-new-configuration-file">4.16.5. <span style="color: #4f81bd"><strong>The new configuration file</strong></span></h3>

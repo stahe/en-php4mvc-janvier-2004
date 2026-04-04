@@ -1535,7 +1535,7 @@
 <p><a id="refheading29994107341754"></a></p>
 <h2 id="412-web-application-actions">4.12. <span style="color: #4f81bd">Web application actions</span></h2>
 <p><a id="refheading29996107341754"></a></p>
-<h3 id="4121-general-operation-of-action-scripts">4.12.1. <span style="color: #4f81bd"><strong>General operation of action scripts</strong></span></h3>
+<h3 id="4121-general-operation-of-action-scripts">4.12.1. <span style="color: #4f81bd">General operation of action scripts</span></h3>
 <ul>
   <li>An action script is called by the controller based on the <b>action</b> parameter it received from the client. 
   </li>
@@ -1547,7 +1547,7 @@
   </li>
 </ul>
 <p><a id="refheading29998107341754"></a></p>
-<h3 id="4122-the-getinit-action">4.12.2. <span style="color: #4f81bd"><strong>The get:init action</strong></span></h3>
+<h3 id="4122-the-getinit-action">4.12.2. <span style="color: #4f81bd">The get:init action</span></h3>
 <p>This is the action that generates the empty form. The configuration file shows that it will be handled by the <strong>a-init.php</strong> script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">  $dConfig[&#39;actions&#39;][&#39;get:init&#39;]=array(&#39;url&#39;=&gt;&#39;a-init.php&#39;);</span>
 </code></pre></div>
@@ -1566,7 +1566,7 @@
 </code></pre></div>
 <p>The <strong>e-formulaire.php</strong> script will generate the [<strong>v-formulaire]</strong> view in its [init] variant, i.e., the empty form.</p>
 <p><a id="refheading30000107341754"></a></p>
-<h3 id="4123-the-postcalculatetax-action">4.12.3. <span style="color: #4f81bd"><strong>The post:calculateTax action</strong></span></h3>
+<h3 id="4123-the-postcalculatetax-action">4.12.3. <span style="color: #4f81bd">The post:calculateTax action</span></h3>
 <p>This is the action that calculates the tax based on the data entered in the form. The configuration file specifies that the <strong>a-calculimpot.php</strong> script will handle this action:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="x">  $dConfig[&#39;actions&#39;][&#39;post:calculateTax&#39;]=array(&#39;url&#39;=&gt;&#39;a-calculateTax.php&#39;);</span>
 </code></pre></div>
@@ -1718,7 +1718,7 @@
 <p><a id="refheading30008107341754"></a></p>
 <h2 id="414-the-applications-views">4.14. <span style="color: #4f81bd">The application&#x27;s views</span></h2>
 <p><a id="refheading30010107341754"></a></p>
-<h3 id="4141-displaying-the-final-view">4.14.1. <span style="color: #4f81bd"><strong>Displaying the final view</strong></span></h3>
+<h3 id="4141-displaying-the-final-view">4.14.1. <span style="color: #4f81bd">Displaying the final view</span></h3>
 <p>Let&#x27;s look at how the controller sends the response to the client once the action requested by the client has been executed:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nx">…</span>
@@ -1804,7 +1804,7 @@
 </code></pre></div>
 <p>The view sent to the user is defined by the <strong>$dResponse[&#x27;responseView&#x27;]</strong> entity, which defines the template to use for the final response.</p>
 <p><a id="refheading30012107341754"></a></p>
-<h3 id="4142-response-template">4.14.2. <span style="color: #4f81bd"><strong>Response template</strong></span></h3>
+<h3 id="4142-response-template">4.14.2. <span style="color: #4f81bd">Response template</span></h3>
 <p>The application will generate its various responses based on the following single template:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A9000000C9E1AAB985.png" style="display:inline-block; margin:4px;width:9.01cm;height:2.658cm;" class="odt-zoomable" data-zoom-src="images/10000000000002A9000000C9E1AAB985.png" /></td></tr></table>
 
@@ -1840,7 +1840,7 @@
 
 <p>A view generator wishing to use the <strong>modèle1</strong> template must define these three dynamic elements. We now define the basic views that can replace the [vue1] and [vue2] elements in the template.</p>
 <p><a id="refheading30014107341754"></a></p>
-<h3 id="4143-the-basic-view-v-bandeauphp">4.14.3. <span style="color: #4f81bd"><strong>The basic view v-bandeau.php</strong></span></h3>
+<h3 id="4143-the-basic-view-v-bandeauphp">4.14.3. <span style="color: #4f81bd">The basic view v-bandeau.php</span></h3>
 <p>The <strong>v-bandeau.php</strong> script generates a view that will be placed in the [vue1] area:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
@@ -1866,7 +1866,7 @@
   </li>
 </ul>
 <p><a id="refheading30016107341754"></a></p>
-<h3 id="4144-the-basic-view-v-formphp">4.14.4. <span style="color: #4f81bd"><strong>The basic view v-form.php</strong></span></h3>
+<h3 id="4144-the-basic-view-v-formphp">4.14.4. <span style="color: #4f81bd">The basic view v-form.php</span></h3>
 <p>The [vue2] section corresponds to either the <strong>[v-form]</strong> view or the <strong>[v-errors]</strong> view. The <strong>[v-form]</strong> view is generated by the <strong>v-formulaire.php</strong> script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;main.php?action=calculerimpot&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
@@ -1908,7 +1908,7 @@
   </li>
 </ul>
 <p><a id="refheading30018107341754"></a></p>
-<h3 id="4145-the-basic-view-v-erreursphp">4.14.5. <span style="color: #4f81bd"><strong>The basic view v-erreurs.php</strong></span></h3>
+<h3 id="4145-the-basic-view-v-erreursphp">4.14.5. <span style="color: #4f81bd">The basic view v-erreurs.php</span></h3>
 <p>The <strong>[v-errors]</strong> view is generated by the <strong>v-errors.php</strong> script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>The following errors occurred:
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
@@ -1934,7 +1934,7 @@
   </li>
 </ul>
 <p><a id="refheading30020107341754"></a></p>
-<h3 id="4146-the-style-sheet">4.14.6. <span style="color: #4f81bd"><strong>The Style Sheet</strong></span></h3>
+<h3 id="4146-the-style-sheet">4.14.6. <span style="color: #4f81bd">The Style Sheet</span></h3>
 <p>All views are styled by a stylesheet. To change the visual appearance of the application, you modify its stylesheet. The following <strong>style1.css</strong> stylesheet: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nt">div</span><span class="p">.</span><span class="nc">menu</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#FFD700</span><span class="p">;</span>
@@ -2044,7 +2044,7 @@
 <p><a id="refheading30022107341754"></a></p>
 <h2 id="415-view-generators">4.15. <span style="color: #4f81bd">View generators</span></h2>
 <p><a id="refheading30024107341754"></a></p>
-<h3 id="4151-role-of-a-view-generator">4.15.1. <span style="color: #4f81bd"><strong>Role of a view generator</strong></span></h3>
+<h3 id="4151-role-of-a-view-generator">4.15.1. <span style="color: #4f81bd">Role of a view generator</span></h3>
 <p>Let’s review the controller code snippet that executes a view generator:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nx">…</span>
@@ -2087,7 +2087,7 @@
   </li>
 </ul>
 <p><a id="refheading30026107341754"></a></p>
-<h3 id="4152-the-view-generator-associated-with-the-e-form-state">4.15.2. <span style="color: #4f81bd"><strong>The view generator associated with the [e-form] state</strong></span></h3>
+<h3 id="4152-the-view-generator-associated-with-the-e-form-state">4.15.2. <span style="color: #4f81bd">The view generator associated with the [e-form] state</span></h3>
 <p>The script responsible for generating the view associated with the <strong>[e-form]</strong> state is called <strong>e-form.php</strong>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="nx">…</span>
@@ -2153,7 +2153,7 @@
 
 <p>Above, the <strong>e-formulaire.php</strong> script uses this information to present the response according to these three variants.</p>
 <p><a id="refheading30028107341754"></a></p>
-<h3 id="4153-the-view-associated-with-the-e-errors-status">4.15.3. <span style="color: #4f81bd"><strong>The view associated with the [e-errors] status</strong></span></h3>
+<h3 id="4153-the-view-associated-with-the-e-errors-status">4.15.3. <span style="color: #4f81bd">The view associated with the [e-errors] status</span></h3>
 <p>The script responsible for generating the view associated with the <strong>[e-errors]</strong> status is called <strong>e-errors.php and</strong> is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>
@@ -2178,7 +2178,7 @@
 <a id="__codelineno-36-21" name="__codelineno-36-21" href="#__codelineno-36-21"></a><span class="cp">?&gt;</span>
 </code></pre></div>
 <p><a id="refheading30030107341754"></a></p>
-<h3 id="4154-displaying-the-final-view">4.15.4. <span style="color: #4f81bd"><strong>Displaying the final view</strong></span></h3>
+<h3 id="4154-displaying-the-final-view">4.15.4. <span style="color: #4f81bd">Displaying the final view</span></h3>
 <p>Both scripts generating the two final views end with a call to the controller&#x27;s <strong>finSession</strong> function:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="nx">…</span>
@@ -2206,7 +2206,7 @@
 <h2 id="416-modifying-the-response-template">4.16. <span style="color: #4f81bd">Modifying the response template</span></h2>
 <p>Here, we assume that we decide to change the visual appearance of the response sent to the client, and we are interested in understanding the implications this has on the code.</p>
 <p><a id="refheading30034107341754"></a></p>
-<h3 id="4161-the-new-template">4.16.1. <span style="color: #4f81bd"><strong>The new template</strong></span></h3>
+<h3 id="4161-the-new-template">4.16.1. <span style="color: #4f81bd">The new template</span></h3>
 <p>The structure of the response will now be as follows:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041C000000EDB2BECC55.png" style="display:inline-block; margin:4px;width:13.917cm;height:3.134cm;" class="odt-zoomable" data-zoom-src="images/100000000000041C000000EDB2BECC55.png" /></td></tr></table>
 
@@ -2252,7 +2252,7 @@
 
 <p>These elements must be set by the view generators.</p>
 <p><a id="refheading30036107341754"></a></p>
-<h3 id="4162-the-different-response-pages">4.16.2. <span style="color: #4f81bd"><strong>The different response pages</strong></span></h3>
+<h3 id="4162-the-different-response-pages">4.16.2. <span style="color: #4f81bd">The different response pages</span></h3>
 <p>The application will now present the following responses to the user. Upon the initial call, the response page will be as follows:</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BA0000030D523DC12C.png" style="display:inline-block; margin:4px;width:16.007cm;height:10.333cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BA0000030D523DC12C.png" /></td></tr></table>
 
@@ -2270,7 +2270,7 @@
 
 <p>Note that the application uses the same actions as before. Only the appearance of the responses has changed.</p>
 <p><a id="refheading30038107341754"></a></p>
-<h3 id="4163-basic-views">4.16.3. <span style="color: #4f81bd"><strong>Basic views</strong></span></h3>
+<h3 id="4163-basic-views">4.16.3. <span style="color: #4f81bd">Basic views</span></h3>
 <p>The basic view [view1] will be associated with the <strong>v-bandeau.php</strong> script, as in the previous example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
 <a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
@@ -2381,10 +2381,10 @@
   </li>
 </ul>
 <p><a id="refheading30040107341754"></a></p>
-<h3 id="4164-the-style-sheet">4.16.4. <span style="color: #4f81bd"><strong>The style sheet</strong></span></h3>
+<h3 id="4164-the-style-sheet">4.16.4. <span style="color: #4f81bd">The style sheet</span></h3>
 <p>It hasn&#x27;t changed. It&#x27;s still <strong>style1.css</strong>.</p>
 <p><a id="refheading30042107341754"></a></p>
-<h3 id="4165-the-new-configuration-file">4.16.5. <span style="color: #4f81bd"><strong>The new configuration file</strong></span></h3>
+<h3 id="4165-the-new-configuration-file">4.16.5. <span style="color: #4f81bd">The new configuration file</span></h3>
 <p>To implement these new views, we need to modify certain lines in the configuration file.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
@@ -2439,7 +2439,7 @@
 </code></pre></div>
 <p>The key change involves updating the view generators associated with the [e-form] and [e-errors] reports. Once this is done, the new view generators are responsible for generating the new response pages.</p>
 <p><a id="refheading30044107341754"></a></p>
-<h3 id="4166-the-view-generator-associated-with-the-e-form-report">4.16.6. <span style="color: #4f81bd"><strong>The view generator associated with the [e-form] report</strong></span></h3>
+<h3 id="4166-the-view-generator-associated-with-the-e-form-report">4.16.6. <span style="color: #4f81bd">The view generator associated with the [e-form] report</span></h3>
 <p>In the configuration file, the <strong>[e-form]</strong> state is now associated with the <strong>e-form2.php</strong> view generator. The code for this script is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>  <span class="c1">// prepare the form response</span>
@@ -2490,7 +2490,7 @@
 </ul>
 
 <p><a id="refheading30046107341754"></a></p>
-<h3 id="4167-the-view-generator-associated-with-the-e-errors-state">4.16.7. <span style="color: #4f81bd"><strong>The view generator associated with the [e-errors] state</strong></span></h3>
+<h3 id="4167-the-view-generator-associated-with-the-e-errors-state">4.16.7. <span style="color: #4f81bd">The view generator associated with the [e-errors] state</span></h3>
 <p>In the configuration file, the <strong>[e-errors]</strong> state is now associated with the <strong>e-errors2.php</strong> view generator. The code for this script is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="cp">&lt;?php</span>
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>

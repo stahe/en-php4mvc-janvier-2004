@@ -526,12 +526,12 @@
 </ol>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">&lt;?php</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="c1">// initializations for tests without a controller</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="c1">// initializations for testing without a controller</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">...</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cp">?&gt;</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">&lt;html&gt;</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">    &lt;head&gt;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">      &lt;title&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$dResponse</span><span class="p">[</span><span class="s1">&#39;title&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/title&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">      &lt;title&gt;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$dReponse</span><span class="p">[</span><span class="s1">&#39;titre&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&lt;/title&gt;</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">      &lt;link type=&quot;text/css&quot; href=&quot;</span><span class="cp">&lt;?php</span> <span class="k">echo</span> <span class="nv">$dReponse</span><span class="p">[</span><span class="s1">&#39;style&#39;</span><span class="p">][</span><span class="s1">&#39;url&#39;</span><span class="p">]</span> <span class="cp">?&gt;</span><span class="x">&quot; rel=&quot;stylesheet&quot; /&gt;    </span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">    &lt;/head&gt;</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="x">  &lt;body&gt;      </span>
@@ -554,14 +554,14 @@
 </ol>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;?php</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="c1">// possibly some initializations, particularly during the debugging phase</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>     <span class="c1">// a few initializations may be necessary, particularly in the debugging phase</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="o">...</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cp">?&gt;</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">&lt;tag&gt;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">&lt;balise&gt;</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">...</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">        // We will try to minimize the PHP code here</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">&lt;/tag&gt;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">         // here we&#39;ll try to minimize the php code</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">&lt;/balise&gt;</span>
 </code></pre></div>
 <p>Note that a basic view is embedded within a template. Its HTML code is integrated into the template’s code. Most often, the template already includes the tags &lt;html&gt;, &lt;head&gt;, and &lt;body&gt;. It is therefore rare to find these tags in a basic view.</p>
 <ol start="7">
@@ -590,7 +590,7 @@
 </ul>
 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="err">...</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;/C/main.php&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;post&quot;</span>  <span class="err">...</span><span class="p">&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;action&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;anAction&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;hidden&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;action&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;uneAction&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>...
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
 </code></pre></div>
@@ -603,7 +603,7 @@
   </li>
 </ul>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/C/main.php?action=uneAction&quot;</span><span class="p">&gt;</span>link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/C/main.php?action=uneAction&quot;</span><span class="p">&gt;</span>lien<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>The controller can start by reading the value of this parameter and then delegate the processing of the request to a module responsible for handling this type of request. Here, we’ve assumed that everything is controlled by a single script called <strong>main.php</strong>. If the application needs to handle actions <strong>action1</strong>, <strong>action2</strong>, ..., <strong>actionx</strong>, you can create a function for each action within the controller. If there are many actions, this can lead to a &quot;dinosaur&quot; controller. Alternatively, one can create scripts <strong>action1.php</strong>, <strong>action2.php</strong>, ..., <strong>actionx.php</strong> responsible for handling each action. The controller tasked with handling action <strong>actionx</strong> will simply load the code from the corresponding script using an instruction such as <strong>include &quot;actionx.php&quot;</strong>. The advantage of this method is that you work outside the controller’s code. Each member of the development team can thus work on the script handling an <strong>actionx</strong> action relatively independently. Including the code from <strong>the actionx.php</strong> script into the controller’s code at runtime also has the advantage of reducing the amount of code loaded into memory. Only the code for handling the current action is loaded. This code inclusion means that controller variables may conflict with those in the action script. We will see that we can limit controller variables to a few well-defined ones, which should then be avoided in the scripts.</p>
 <ul>
